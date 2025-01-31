@@ -1,39 +1,68 @@
-# Extract_Taxinfo_from_blast
-This python script uses taxadb sqlite database to extract TaxID and Taxinfo associated to Accession ids. '
+Extract_Taxinfo_from_blast
 
-First you need to download the taxadb from https://github.com/HadrienG/taxadb 
+This Python script uses the taxadb SQLite database to extract TaxID and taxonomic information associated with Accession IDs from BLAST, Diamond, or MMseqs2 output files.
+Prerequisites
 
+Before using this script, you need to download the taxadb database. You can find it here:
+🔗 taxadb GitHub Repository
+Description
 
------------------------------------------------------------------------------------
-
-                        Add taxonomy informations into blast tab.
-
------------------------------------------------------------------------------------
+This script allows you to add taxonomic information to a BLAST, Diamond, or MMseqs2 output file. It reads the input file, extracts Accession IDs, and appends the corresponding TaxID and taxonomic information to the output file.
+Usage
+Command-Line Arguments
+bash
+Copy
 
 usage: Add_taxid_info.py [-h] [-b BLAST] [-o OUT] [-d TAXADB_SQLITE_FILE]
                          [-blst BLAST_TYPE] [-del OUTPUT_DELIMITATOR]
 
-Allows you to add taxonomic information to a blast, diamond or mmseqs2 output
-file.
+Allows you to add taxonomic information to a blast, diamond, or mmseqs2 output file.
 
 optional arguments:
-  -h, --help            show this help message and exit
+  -h, --help            Show this help message and exit.
   -b BLAST, --blast BLAST
-                        The blast file in tabular format
-  -o OUT, --out OUT     The ouptut path (with the new filename) where to
-                        create the oufile
+                        The blast file in tabular format.
+  -o OUT, --out OUT     The output path (with the new filename) where to create the output file.
   -d TAXADB_SQLITE_FILE, --taxadb_sqlite_file TAXADB_SQLITE_FILE
-                        The directory where is located the sqlite database
+                        The directory where the SQLite database is located.
   -blst BLAST_TYPE, --blast_type BLAST_TYPE
-                        The type of blast : support blast (blast), diamond
-                        (diamond) and mmseqs2 (mmseqs2) analysis
+                        The type of blast: supports 'blast', 'diamond', and 'mmseqs2' analysis.
   -del OUTPUT_DELIMITATOR, --Output_delimitator OUTPUT_DELIMITATOR
-                        The desired output delimitator, by default : ';' but
-                        you cand add tabular format with the option : 'tab'
+                        The desired output delimiter. Default is ';'. Use 'tab' for tabular format.
 
-Ex usage python3 add_taxid_info.py -blst Mmseqs2  -b /beegfs/data/bguinet/these/Horizon_project_part/tBLASTn_VLPs/Matches_VLPs_prot_vs_NR_mmseqs2_all.m8 -d /beegfs/data/bguinet/taxadb/taxadb_new.sqlite -o /beegfs/data/bguinet/these/Horizon_project_part/tBLASTn_VLPs/Matches_VLPs_prot_vs_NR_mmseqs2_all_taxid.m8 
-python3 python_test.py -blst Mmseqs2  -b tab_test -d /beegfs/data/bguinet/taxadb/taxadb_new.sqlite -o tab_test_taxid.m8 
+Example Usage
 
+    For MMseqs2 output:
+    bash
+    Copy
 
+    python3 add_taxid_info.py -blst Mmseqs2 \
+    -b /path/to/Matches_VLPs_prot_vs_NR_mmseqs2_all.m8 \
+    -d /path/to/taxadb_new.sqlite \
+    -o /path/to/Matches_VLPs_prot_vs_NR_mmseqs2_all_taxid.m8
 
+    For testing with a sample file:
+    bash
+    Copy
 
+    python3 python_test.py -blst Mmseqs2 \
+    -b tab_test \
+    -d /path/to/taxadb_new.sqlite \
+    -o tab_test_taxid.m8
+
+Output
+
+The script generates a new file with the same format as the input file, but with additional columns for TaxID and taxonomic information.
+Notes
+
+    Ensure that the taxadb SQLite database is correctly downloaded and accessible.
+
+    The script supports BLAST, Diamond, and MMseqs2 output formats.
+
+    By default, the output delimiter is ;. Use the -del tab option for tab-delimited output.
+
+License
+
+This project is open-source and available under the MIT License.
+
+Feel free to contribute or report issues! 🚀

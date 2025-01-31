@@ -12,7 +12,7 @@ Usage
 Command-Line Arguments
 bash
 Copy
-
+```
 usage: Add_taxid_info.py [-h] [-b BLAST] [-o OUT] [-d TAXADB_SQLITE_FILE]
                          [-blst BLAST_TYPE] [-del OUTPUT_DELIMITATOR]
 
@@ -29,7 +29,7 @@ optional arguments:
                         The type of blast: supports 'blast', 'diamond', and 'mmseqs2' analysis.
   -del OUTPUT_DELIMITATOR, --Output_delimitator OUTPUT_DELIMITATOR
                         The desired output delimiter. Default is ';'. Use 'tab' for tabular format.
-
+```
 Example Usage
 
     For MMseqs2 output:

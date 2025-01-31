@@ -4,7 +4,8 @@ This Python script uses the taxadb SQLite database to extract TaxID and taxonomi
 Prerequisites
 
 Before using this script, you need to download the taxadb database. You can find it here:
-🔗 taxadb GitHub Repository
+[🔗 taxadb GitHub Repository](https://github.com/HadrienG/taxadb)
+
 Description
 
 This script allows you to add taxonomic information to a BLAST, Diamond, or MMseqs2 output file. It reads the input file, extracts Accession IDs, and appends the corresponding TaxID and taxonomic information to the output file.

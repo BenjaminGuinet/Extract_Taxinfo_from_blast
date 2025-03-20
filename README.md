@@ -67,3 +67,8 @@ License
 This project is open-source and available under the MIT License.
 
 Feel free to contribute or report issues! 🚀
+
+If you don't want to use TaxaDB but instead bio Entrez you can use : 
+```
+python3 /cfs/klemming/projects/supr/snic2022-6-144/BENJAMIN/TOOLS/Extract_Genbank_TaxInfo.py -b /cfs/klemming/projects/supr/snic2022-6-144/BENJAMIN/Herpes_capture/New_capture/ALL_P34656_548689_vs_NT.m8 -o /cfs/klemming/projects/supr/snic2022-6-144/BENJAMIN/Herpes_capture/New_capture/ALL_P34656_548689_vs_NT_taxo.m8 -blst mmseqs2
+```

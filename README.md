@@ -22,7 +22,7 @@ Allows you to add taxonomic information to a blast, diamond, or mmseqs2 output f
 optional arguments:
   -h, --help            Show this help message and exit.
   -b BLAST, --blast BLAST
-                        The blast file in tabular format.
+                        The blast file in tabular format with header names.
   -o OUT, --out OUT     The output path (with the new filename) where to create the output file.
   -d TAXADB_SQLITE_FILE, --taxadb_sqlite_file TAXADB_SQLITE_FILE
                         The directory where the SQLite database is located.
@@ -41,15 +41,6 @@ Example Usage
     -b /path/to/Matches_VLPs_prot_vs_NR_mmseqs2_all.m8 \
     -d /path/to/taxadb_new.sqlite \
     -o /path/to/Matches_VLPs_prot_vs_NR_mmseqs2_all_taxid.m8
-
-    For testing with a sample file:
-    bash
-    Copy
-
-    python3 python_test.py -blst Mmseqs2 \
-    -b tab_test \
-    -d /path/to/taxadb_new.sqlite \
-    -o tab_test_taxid.m8
 
 Output
 

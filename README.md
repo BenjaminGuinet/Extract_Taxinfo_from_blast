@@ -55,7 +55,7 @@ License
 
 This project is open-source and available under the MIT License.
 
-Feel free to contribute or report issues! 🚀
+Feel free to contribute or report issues! 
 
 If you don't want to use TaxaDB but instead bio Entrez you can use : 
 ```

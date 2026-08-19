@@ -7,7 +7,6 @@ import time
 from Bio import Entrez
 from tqdm import tqdm
 
-api_key="ce154668962f6a9d4763cab6df03b7add608"
 Entrez.email = "benjamin.guinet95@gmail.com"  # Replace with your email
 Entrez.api_key = api_key
 
